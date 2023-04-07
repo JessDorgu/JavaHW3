@@ -1,4 +1,12 @@
 // Assignment code here
+var passwordLength = "";
+var specialCharacters;
+var numberCharacters;
+var upperCase;
+var lowerCase;
+
+var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 
 
 // Get references to the #generate element
@@ -15,3 +23,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
