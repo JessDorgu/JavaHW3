@@ -1,10 +1,3 @@
-// Assignment code here
-var passwordLength = "";
-var specialCharacters;
-var numberCharacters;
-var upperCase;
-var lowerCase;
-
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = ["!","@","$","%","%","^","&","*" ];
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -40,11 +33,10 @@ function generatePassword() {
         var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");   
     } 
 
-      // Assign an action to the password parameters NEED TO FIX THIS
       var passwordCharacters = []
       
     if (confirmSpecialCharacter) {
-      passwordCharacters = passwordCharacters.concat(specialChar)
+      passwordCharacters = passwordCharacters.concat(special)
     }
 
     if (confirmNumericCharacter) {
@@ -52,21 +44,21 @@ function generatePassword() {
     }
       
     if (confirmLowerCase) {
-      passwordCharacters = passwordCharacters.concat(alphaLower)
+      passwordCharacters = passwordCharacters.concat(lower)
     }
 
     if (confirmUpperCase) {
-      passwordCharacters = passwordCharacters.concat(alphaUpper)
+      passwordCharacters = passwordCharacters.concat(upper)
     }
 
-      console.log(passwordCharacters)
+      console.log(passwordCharacters);
 
       
-      var rPassword = ""
+      var rPassword = []
       
       for (var i = 0; i < confirmLength; i++) {
         rPassword = rPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
-        console.log(randomPassword)
+        console.log(rPassword)
       }
       return rPassword;
 }
